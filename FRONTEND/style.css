@@ -1,0 +1,300 @@
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa, #e8ecf1); /* soft white/gray gradient */
+  color: #2e5a77;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* === BACKGROUND HEART ICONS === */
+.background-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-icons i {
+  position: absolute;
+  color: rgba(124, 67, 67, 0.25); /* light gray hearts */
+  font-size: 40px;
+  animation: float 8s infinite ease-in-out;
+}
+
+.background-icons i:nth-child(1) { top: 10%; left: 15%; font-size: 50px; }
+.background-icons i:nth-child(2) { top: 30%; left: 5%; }
+.background-icons i:nth-child(3) { top: 60%; left: 20%; font-size: 60px; }
+.background-icons i:nth-child(4) { top: 80%; left: 10%; }
+.background-icons i:nth-child(5) { top: 15%; right: 20%; font-size: 55px; }
+.background-icons i:nth-child(6) { top: 40%; right: 10%; }
+.background-icons i:nth-child(7) { top: 70%; right: 25%; font-size: 65px; }
+.background-icons i:nth-child(8) { top: 85%; right: 15%; }
+.background-icons i:nth-child(9) { top: 50%; left: 50%; }
+.background-icons i:nth-child(10) { top: 25%; right: 35%; }
+.background-icons i:nth-child(11) { top: 65%; left: 70%; }
+.background-icons i:nth-child(12) { top: 45%; right: 50%; font-size: 70px; }
+.background-icons i:nth-child(13) { top: 5%; left: 60%; }
+.background-icons i:nth-child(14) { top: 90%; right: 40%; }
+.background-icons i:nth-child(15) { top: 75%; left: 40%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 40px auto;
+  background: linear-gradient(145deg, #f7faff, #eef4ff);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 1100px; /* aligns with features box */
+}
+
+.hero-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content .text {
+  flex: 1;
+  text-align: left;
+}
+
+/* Small title */
+.hero-content .text h1 {
+  font-size: 20px;
+  color: #6a0dad; /* purple */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Main heading */
+.hero-content .text h2 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.hero-content .text .highlight {
+  color: #007bff; /* blue */
+}
+
+/* Paragraph - fixed to 3 lines */
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+  max-width: 520px; /* keeps it aligned like screenshot */
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn.secondary {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Tags */
+.hero-tags span {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  font-size: 14px;
+}
+
+/* Right Image */
+.hero-content .image img {
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+
+/* === FEATURES SECTION === */
+.features {
+  background: rgba(147, 209, 218, 0.95);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1100px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.features p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Feature Cards */
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 calc(25% - 20px);
+  background: #d7dadd;
+  border-radius: 12px;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  min-width: 200px;
+}
+
+.card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* === LOGIN/REGISTER SECTION === */
+.container {
+  background: rgba(157, 223, 235, 0.95);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 20px auto 60px;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.form-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-box h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-box input,
+.form-box button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.form-box input {
+  background: #ced1d6;
+  border: 1px solid #4c9cb4;
+}
+
+.form-box input::placeholder {
+  color: #0f3c58;
+}
+
+.form-box button {
+  background: #6993bd;
+  color: #0a0202;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.form-box button:hover {
+  background: #b7d0eb;
+}
+
+.form-box p {
+  text-align: center;
+  margin-top: 15px;
+  color: #080505;
+}
+
+.form-box a {
+  color: #03090f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-box a:hover {
+  text-decoration: underline;
+}
+
+/* Messages */
+.message {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+/* Hide registration initially */
+.hidden {
+  display: none;
+}
